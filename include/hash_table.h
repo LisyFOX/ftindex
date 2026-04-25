@@ -1,3 +1,6 @@
+#ifndef HASH_TABLE_H
+#define HASH_TABLE_H
+
 #include <pthread.h>
 
 typedef int (*hash_function_t)(void *key);
@@ -29,3 +32,5 @@ void destroy_hash_table(struct hash_table_t *hash_table);
 
 struct node_t * create_node(void *key, void *value, struct node_t *next);
 struct node_t * get_node(struct hash_table_t * hash_table, int bucket_num);
+
+#endif
