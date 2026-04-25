@@ -8,7 +8,7 @@ FTIndex builds a full-text search index from multiple input text files.
 
 It creates a shared hash table storing pairs:
 
-$\ \langle word, file\_name \rangle$
+$\ \langle word, file\\_name \rangle$
 
 Each word is mapped to all files in which it appears, enabling fast lookup of words across multiple documents.
 
