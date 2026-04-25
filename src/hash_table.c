@@ -116,3 +116,14 @@ void hash_table_insert(struct hash_table_t *hash_table, int bucket_num, void *ke
     // Unlock this bucket
     pthread_mutex_unlock(&hash_table->locks[bucket_index]);
 }
+
+void destroy_hash_table(struct hash_table_t *hash_table)
+{
+    for (int i = 0; i < hash_table->bucket_num; i++) {
+        pthread_mutex_destroy(&hash_table->locks[i]);
+    }
+
+    free(hash_table->locks);
+    free(hash_table->buckets);
+    free(hash_table);
+}

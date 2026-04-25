@@ -245,6 +245,8 @@ int main(int argc, char *argv[]) {
     // Free the array of files
     free(files);
 
+    // Free allocated memory for hash table
+    destroy_hash_table(hash_table);
 
     return 0;
 }

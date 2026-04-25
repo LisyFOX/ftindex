@@ -25,6 +25,7 @@ struct node_t
 
 struct hash_table_t * create_hash_table(int bucket_num, hash_function_t hash, compare_function_t compare);
 void hash_table_insert(struct hash_table_t *hash_table, int bucket_num, void *key, void *value);
+void destroy_hash_table(struct hash_table_t *hash_table);
 
 struct node_t * create_node(void *key, void *value, struct node_t *next);
 struct node_t * get_node(struct hash_table_t * hash_table, int bucket_num);
