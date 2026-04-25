@@ -1,6 +1,6 @@
 <div align="center">
 <h2>FTIndex</h2>
-A multithreaded full-text indexer written in C.
+A multi-threaded full-text indexer written in C.
 </div>
 
 ## 💡 Overview
